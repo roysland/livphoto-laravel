@@ -1,0 +1,41 @@
+.flex {
+    display: flex;
+    &.row               { flex-direction: row; }
+    &.column            { flex-direction: column; }
+    &.row-reverse       { flex-direction: row-reverse; }
+    &.column-reverse    { flex-direction: column-reverse; }
+    &.wrap              { flex-wrap: wrap; }
+    &.nowrap            { flex-wrap: nowrap; }
+    &.wrap-reverse      { flex-wrap: wrap-reverse; }
+    &.justify-start     { justify-content: flex-start; }
+    &.justify-end       { justify-content: flex-end; }
+    &.justify-center    { justify-content: center; }
+    &.justify-between   { justify-content: space-between; }
+    &.justify-around    { justify-content: space-around; }
+    &.justify-evenly    { justify-content: space-evenly; }
+    &.align-start       { align-items: flex-start; }
+    &.align-end         { align-items: flex-end; }
+    &.align-center      { align-items: center; }
+    &.align-baseline    { align-items: baseline; }
+    &.align-stretch     { align-items: stretch; }
+}
+
+$spacings: (0,1,2,3,4,5,6,7,8);
+@each $value in $spacings {
+    .m-#{$value} { margin: #{$value * 0.25}rem; }
+    .mt-#{$value} { margin-top: #{$value * 0.25}rem; }
+    .mr-#{$value} { margin-right: #{$value * 0.25}rem; }
+    .mb-#{$value} { margin-bottom: #{$value * 0.25}rem; }
+    .ml-#{$value} { margin-left: #{$value * 0.25}rem; }
+    .mx-#{$value} { margin-left: #{$value * 0.25}rem; margin-right: #{$value * 0.25}rem; }
+    .my-#{$value} { margin-top: #{$value * 0.25}rem; margin-bottom: #{$value * 0.25}rem; }
+
+    .p-#{$value} { padding: #{$value * 0.25}rem; }
+    .pt-#{$value} { padding-top: #{$value * 0.25}rem; }
+    .pr-#{$value} { padding-right: #{$value * 0.25}rem; }
+    .pb-#{$value} { padding-bottom: #{$value * 0.25}rem; }
+    .pl-#{$value} { padding-left: #{$value * 0.25}rem; }
+    .px-#{$value} { padding-left: #{$value * 0.25}rem; padding-right: #{$value * 0.25}rem; }
+    .py-#{$value} { padding-top: #{$value * 0.25}rem; padding-bottom: #{$value * 0.25}rem; }
+    
+}
