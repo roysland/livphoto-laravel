@@ -3,7 +3,7 @@
 @section('content')
 <header class="makeup">
     <div id="bg">
-        <img src="https://makeup.livjansen.no/images/behindthescenes/1602194_10151826961531968_1238093507_o.jpg" alt="" />
+        <img src="https://d2wbuz9ehbt6lo.cloudfront.net/images/behindthescenes/1602194_10151826961531968_1238093507_o.jpg" alt="" />
     </div>
     <div class="dark-gradient"></div>
     <a class="text" href="/portfolio">
