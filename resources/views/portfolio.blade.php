@@ -10,15 +10,21 @@
         <button type="submit">Upload</button>
     </form>
 </div>
+<button class="toggleAdmin" onclick="toggleAdmin()">Skru av/på admin</button>
 @endif
 <section class="image-grid">
 @foreach($images as $image)
-<figure data-id="{{$image->id}}" data-order="{{$image->gallery_order}}" data-folder={{$image->category}} data-src={{$image->url}} tab-index="0">
-    <picture>
+<figure data-id="{{$image->id}}" data-description="{{$image->description}}" data-order="{{$image->gallery_order}}" data-folder={{$image->category}} data-src={{$image->url}} tab-index="0">
+    <picture id="{{$image->category}}-{{$image->id}}">
         <source media="(min-width: 768px)" srcset={{ $image->url }} />
         <source media="(min-width: 0px)" srcset={{ $image->url }} />
         <img src={{ $image->url }} alt="" />
     </picture>
+    @if ($image->description)
+    <caption class="caption">
+        <p>{{$image->description}}</p>
+    </caption>
+    @endif
 </figure>
 @endforeach
 </section>
@@ -29,21 +35,23 @@
         @endif
     @endforeach
 </ul>
-<pre><b>session</b>
+
 @if($session)
 
 <form action="{{ route('admin.logout') }}" method="POST">
     @csrf
     <button type="submit">Logout</button>
 </form>
+
 @endif
-</pre>
+
 </section>
 @endsection
 
 @section('script')
 @if ($session === 'yes' ?? false)
 <script>
+    let adminActive = true
     function createAdminBar(el) {
         const adminBar = document.createElement('div');
         adminBar.classList.add('admin-bar', 'hidden');
@@ -106,8 +114,31 @@
         }
     }
 
+    function createEditForm (el) {
+        el.classList.add('editing')
+        const form = document.createElement('div');
+        form.classList.add('edit-form');
+        form.innerHTML = `
+            <textarea>${el.dataset.description}</textarea>
+            <button type="submit">Save</button>
+        `;
+        const textarea = form.querySelector('textarea');
+        form.querySelector('button').addEventListener('click', () => saveDescription(textarea.value, el.dataset.id));
+        return form;
+    }
+
+    async function saveDescription(description, id) {
+        console.log(description, id)
+        const gal = await axios.post(`/portfolio/${id}/edit`, {
+            description: description
+        })
+        replaceSection(gal.data);
+    }
+
     async function handleEdit(el) {
         const id = el.dataset.id;
+        const form = createEditForm(el);
+        el.appendChild(form);
         console.log(id);
     }
 
@@ -118,6 +149,9 @@
         });
     }
 
+    function toggleAdmin () {
+        document.querySelector('.image-grid').classList.toggle('admin-disabled')
+    }
 
     async function main() {
         attachAdminBars();

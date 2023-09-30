@@ -6,6 +6,11 @@
             <source media="(min-width: 0px)" srcset={{ $image->url }} />
             <img src={{ $image->url }} alt="" />
         </picture>
+        @if ($image->description)
+        <caption class="caption">
+            <p>{{$image->description}}</p>
+        </caption>
+        @endif
     </figure>
     @endforeach
 </section>

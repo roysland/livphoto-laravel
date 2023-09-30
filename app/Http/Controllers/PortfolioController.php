@@ -22,6 +22,7 @@ class PortfolioController extends Controller
             $categories[] = $image->category;
         }
         $categories = array_unique($categories);
+        sort($categories);
         return view('portfolio', ['images' => $showImages, 'categories' => $categories, 'cat' => $cat, 'session' => $session]);
     }
 
@@ -50,6 +51,17 @@ class PortfolioController extends Controller
         $image->delete();
         $newGallery = Portfolio::where('category', $image->category)->orderBy('gallery_order', 'asc')->get();
         return view('partials.gallery', ['images' => $newGallery]);
+    }
+
+    public function edit($id)
+    {
+        $image = Portfolio::find(intval($id));
+        $image->description = request()->get('description');
+        $image->save();
+
+        $newGallery = Portfolio::where('category', $image->category)->orderBy('gallery_order', 'asc')->get();
+        return view('partials.gallery', ['images' => $newGallery]);
+
     }
 
     public function uploadFile(Request $request) {

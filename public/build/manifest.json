@@ -1,14 +1,14 @@
 {
   "resources/css/bundle.scss": {
-    "file": "assets/bundle-e905e428.css",
+    "file": "assets/bundle-ccad0e12.css",
     "isEntry": true,
     "src": "resources/css/bundle.scss"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/bundle-e905e428.css"
+      "assets/bundle-ccad0e12.css"
     ],
-    "file": "assets/app-f4dfb4f8.js",
+    "file": "assets/app-ee5ec7aa.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

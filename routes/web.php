@@ -31,4 +31,5 @@ Route::group([], function () {
     Route::get('/portfolio/{id}/move-up', [PortfolioController::class, 'moveUp'])->name('portfolio.move-up');
     Route::get('/portfolio/{id}/move-down', [PortfolioController::class, 'moveDown'])->name('portfolio.move-down');
     Route::get('/portfolio/{id}/delete', [PortfolioController::class, 'delete'])->name('portfolio.delete');
+    Route::post('/portfolio/{id}/edit', [PortfolioController::class, 'edit'])->name('portfolio.edit');
 });
