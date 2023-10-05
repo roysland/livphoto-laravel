@@ -36,7 +36,7 @@
     <li><a href="{{ route('portfolio.index') }}?category=Fashion">Fashion</a></li>
     <li><a href="{{ route('portfolio.index') }}?category=Print and Media">Print and Media</a></li>
     <li><a href="{{ route('portfolio.index') }}?category=Music">Music</a></li>
-    <li><a href="{{ route('portfolio.index') }}?category=Behind the scenes">Behind the scenes</a></li>
+    <li><a href="{{ route('portfolio.index') }}?category=Behind the Scenes">Behind the scenes</a></li>
 </ul>
 
 @if($session)

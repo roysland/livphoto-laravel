@@ -11,7 +11,7 @@ class PortfolioController extends Controller
     public function index()
     {
         $images = Portfolio::orderBy('gallery_order', 'asc')->get();
-        $cat = request()->get('category');
+        $cat = urldecode(request()->get('category'));
         // Get category from get request
 
         $session = session()->get('admin');
