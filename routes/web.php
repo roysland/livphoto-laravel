@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\BioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +23,7 @@ Route::get('/', function () {
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
 
 Route::post('/portfolio/upload', [PortfolioController::class, 'uploadFile'])->name('portfolio.upload');
-
+Route::get('/bio', [BioController::class, 'index'])->name('bio.index');
 Route::get('/admin', [Admin::class, 'index'])->name('admin.index');
 
 Route::post('/admin', [Admin::class, 'login'])->name('admin.login');

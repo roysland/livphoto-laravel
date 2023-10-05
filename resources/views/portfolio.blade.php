@@ -29,11 +29,14 @@
 @endforeach
 </section>
 <ul class="other-categories" hx-boost="true">
-    @foreach($categories as $category)
-        @if($category !== $cat)
-            <li><a href="{{ route('portfolio.index') }}?category={{$category}}">{{ $category}}</a></li>
-        @endif
-    @endforeach
+    <li><a href="{{ route('bio.index') }}">Bio</a></li>
+    <li><a href="{{ route('portfolio.index') }}?category=Clean Beauty">Clean Beauty</a></li>
+    <li><a href="{{ route('portfolio.index') }}?category=Beauty">Beauty</a></li>
+    <li><a href="{{ route('portfolio.index') }}?category=Makeup Art">Makeup Art</a></li>
+    <li><a href="{{ route('portfolio.index') }}?category=Fashion">Fashion</a></li>
+    <li><a href="{{ route('portfolio.index') }}?category=Print and Media">Print and Media</a></li>
+    <li><a href="{{ route('portfolio.index') }}?category=Music">Music</a></li>
+    <li><a href="{{ route('portfolio.index') }}?category=Behind the scenes">Behind the scenes</a></li>
 </ul>
 
 @if($session)
