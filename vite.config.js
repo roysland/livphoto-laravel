@@ -11,14 +11,7 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    server: { 
-        hmr: {
-            host: 'localhost',
-        },
-    },
-    resolve: {
-        alias: {
-            '@': '/resources/ts',
-        },
-    },
 });
+
+git config --global user.email "roysland@gmail.com"
+git config --global user.name "Øyvind Røysland"

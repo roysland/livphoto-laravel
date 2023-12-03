@@ -34,3 +34,5 @@ Route::group([], function () {
     Route::get('/portfolio/{id}/delete', [PortfolioController::class, 'delete'])->name('portfolio.delete');
     Route::post('/portfolio/{id}/edit', [PortfolioController::class, 'edit'])->name('portfolio.edit');
 });
+
+Route::post('/bio', [BioController::class, 'store'])->name('bio.store');

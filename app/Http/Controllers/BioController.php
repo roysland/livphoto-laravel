@@ -11,4 +11,17 @@ class BioController extends Controller
         $session = session()->get('admin');
         return view('bio', ['session' => $session]);
     }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+        ]);
+        $request->session()->put('askedQuote', 'yes');
+        $quote = new \App\Models\Quotes();
+        $quote->email = $request->email;
+        $quote->save();
+
+        return redirect('/bio')->with('success', 'Quote request sent!');
+    }
 }
