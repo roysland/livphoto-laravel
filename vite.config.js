@@ -12,6 +12,3 @@ export default defineConfig({
         }),
     ],
 });
-
-git config --global user.email "roysland@gmail.com"
-git config --global user.name "Øyvind Røysland"
