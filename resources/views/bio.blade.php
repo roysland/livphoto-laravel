@@ -14,7 +14,7 @@ she continues to evolve as a makeup artist by staying updated on the industry la
 Her areas of expertise are commercial / editorial as well as high fashion, beauty, and runway makeup.</p>
 <p>
 Either you are a professional agency or an amature photographer, Livs goal will be to costumize her work to get the best end result for the job. 
-As a educated and professional she wish to 
+As an educater and professional she wish to 
 represent her vision in the fashion world and inspire others to see beauty in all forms. 
 Being personable, out-going, professional, and determined has allowed her to succeed in her endeavours, 
 and take a great pride in calling herself a makeup artist
@@ -75,9 +75,12 @@ For requesting a booking price please look link below
 <h1>CV</h1>
 <h3>Magazines</h3>
 <div class="flex">
+<span class="tag">Aller media</span>
+<span class="tag">Dagbladet</span>
 <span class="tag">Elle </span>
 <span class="tag">Henne</span>
 <span class="tag">Mag</span>
+<span class="tag">IN magasinet</span>
 <span class="tag">Kk</span>
 <span class="tag">Det Nye</span>
 <span class="tag">Se og hør</span>
