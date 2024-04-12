@@ -108,16 +108,16 @@ For requesting a booking price please look link below
 <span class="tag">Madcon </span>
 <span class="tag">Karpe diem </span>
 <span class="tag">Paperboys</span>
-<span class="tag">Sandra Lyng haugen</span>
-<span class="tag">Tommy tee</span>
-<span class="tag">Lars vaular </span>
+<span class="tag">Sandra Lyng Haugen</span>
+<span class="tag">Tommy Tee</span>
+<span class="tag">Lars Vaular </span>
 <span class="tag">Samsaya </span>
 <span class="tag">Onkel P</span>
 <span class="tag">Winnie paperboys</span>
 <span class="tag">Erik og Kris</span>
-<span class="tag">Stemma Mwangi </span>
-<span class="tag">Timbuktu rapper </span>
-<span class="tag">Alexander with idol sanger </span>
+<span class="tag">Stella Mwangi </span>
+<span class="tag">Timbuktu </span>
+<span class="tag">Alexander With </span>
 <span class="tag">LidoLido</span>
 <span class="tag">Tooji</span>
 </div>
