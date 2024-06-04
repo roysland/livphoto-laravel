@@ -31,12 +31,12 @@
 <ul class="other-categories" hx-boost="true">
     <li><a href="{{ route('bio.index') }}">Bio</a></li>
     <li><a href="{{ route('portfolio.index') }}?category=Clean Beauty">Clean Beauty</a></li>
-    <li><a href="{{ route('portfolio.index') }}?category=Colors">Colors</a></li>
     <li><a href="{{ route('portfolio.index') }}?category=Beauty">Beauty</a></li>
     <li><a href="{{ route('portfolio.index') }}?category=Makeup Art">Makeup Art</a></li>
     <li><a href="{{ route('portfolio.index') }}?category=Fashion">Fashion</a></li>
     <li><a href="{{ route('portfolio.index') }}?category=Print and Media">Print and Media</a></li>
     <li><a href="{{ route('portfolio.index') }}?category=Music">Music</a></li>
+    <li><a href="{{ route('portfolio.index') }}?category=Colors">Colors</a></li>
     <li><a href="{{ route('portfolio.index') }}?category=Behind the Scenes">Behind the scenes</a></li>
 </ul>
 
